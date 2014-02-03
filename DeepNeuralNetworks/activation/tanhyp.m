@@ -11,5 +11,4 @@ function [y] = tanhyp(x)
 %	David Diaz Vico
 
 a = exp(2*x);
-y = (a-1)./(a+1);
-
+y = (a - 1)./(a + 1);

@@ -10,5 +10,4 @@ function [y] = softsign(x)
 % Author:
 %	David Diaz Vico
 
-y = x./(1+abs(x));
-
+y = x./(1 + abs(x));

@@ -1,4 +1,4 @@
-function [Y] = none(X,noisefactor)
+function [Y] = none(X, noisefactor)
 % Adds gaussian noise to X.
 %
 % Arguments:
@@ -11,4 +11,3 @@ function [Y] = none(X,noisefactor)
 %	David Diaz Vico
 
 Y = X;
-

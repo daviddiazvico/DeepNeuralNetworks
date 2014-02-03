@@ -12,18 +12,18 @@ data = data';
 labels = labels';
 testdata = testdata';
 testlabels = testlabels';
-[D,N] = size(data);
+[D, N] = size(data);
 
 % Create targets
 targets = labels2targets(labels);
 
 % Define the deep network parameters
-Mout = size(targets,1);
+Mout = size(targets, 1);
 F = @logistic;
 outF = @identity;
 
 % Tries several numbers of hidden layers for each model
-Larray = [1,2,3,4];
+Larray = [1, 2, 3, 4];
 nlayers = length(Larray);
 
 % Tries several hidden layer widths for each model
@@ -39,4 +39,3 @@ trainDeepModels;
 
 % Tests the deep models
 testDeepModels;
-

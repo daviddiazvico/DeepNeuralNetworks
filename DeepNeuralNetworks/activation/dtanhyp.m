@@ -11,5 +11,4 @@ function [y] = dtanhyp(x)
 %	David Diaz Vico
 
 a = exp(2*x);
-y = 4*a./(a.^2+2*a+1);
-
+y = 4*a./(a.^2 + 2*a + 1);

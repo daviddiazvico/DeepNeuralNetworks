@@ -10,17 +10,16 @@ function out = prepareArgs(args)
 % foo(opts)
 %
 % This is equivalent to calling
-% foo('maxiter',100,'verbose',true)
+% foo('maxiter', 100, 'verbose', true)
 %
 % This file is from matlabtools.googlecode.com
 
 if isstruct(args)
-	out = interweave(fieldnames(args),struct2cell(args));
+    out = interweave(fieldnames(args), struct2cell(args));
 elseif ~isempty(args) && isstruct(args{1})
-	out = interweave(fieldnames(args{1}),struct2cell(args{1}));
+    out = interweave(fieldnames(args{1}), struct2cell(args{1}));
 else
-	out = args;
+    out = args;
 end
 
 end
-

@@ -11,4 +11,3 @@ function [y] = didentity(x)
 %	David Diaz Vico
 
 y = 1;
-

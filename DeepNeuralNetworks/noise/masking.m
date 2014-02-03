@@ -1,4 +1,4 @@
-function [Y] = masking(X,noisefactor)
+function [Y] = masking(X, noisefactor)
 % Adds masking noise to X.
 %
 % Arguments:
@@ -10,8 +10,7 @@ function [Y] = masking(X,noisefactor)
 % Author:
 %	David Diaz Vico
 
-[D,N] = size(X);
+[D, N] = size(X);
 Y = X;
-corruption = binornd(1,noisefactor,D,N);
-Y(corruption==1) = 0;
-
+corruption = binornd(1, noisefactor, D, N);
+Y(corruption == 1) = 0;

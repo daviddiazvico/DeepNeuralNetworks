@@ -1,4 +1,4 @@
-function [Y] = gaussian(X,noisefactor)
+function [Y] = gaussian(X, noisefactor)
 % Adds gaussian noise to X.
 %
 % Arguments:
@@ -10,6 +10,5 @@ function [Y] = gaussian(X,noisefactor)
 % Author:
 %	David Diaz Vico
 
-[D,N] = size(X);
-Y = X+normrnd(0,noisefactor,D,N);
-
+[D, N] = size(X);
+Y = X + normrnd(0, noisefactor, D, N);
