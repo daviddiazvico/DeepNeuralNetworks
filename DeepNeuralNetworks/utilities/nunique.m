@@ -1,7 +1,7 @@
-function N = nunique(X,dim)
+function N = nunique(X, dim)
 % Efficiently count the unique elements of X along the specified dimension.
-% Like length(unique(X(:,j))) or length(unique(X(i,:))) but vectorized
-% Supports multidimensional arrays, e.g. nunique(X,3).
+% Like length(unique(X(:, j))) or length(unique(X(i, :))) but vectorized
+% Supports multidimensional arrays, e.g. nunique(X, 3).
 %
 % Example:
 % X =
@@ -13,10 +13,10 @@ function N = nunique(X,dim)
 %	2     5     4     1     2     2     4
 %	2     4     3     3     3     1     4
 %	4     1     2     3     1     2     4
-% nunique(X,1)
+% nunique(X, 1)
 % ans =
 %	4     3     4     4     4     5     3
-% nunique(X,2)
+% nunique(X, 2)
 % ans =
 %	5
 %	4
@@ -30,12 +30,11 @@ function N = nunique(X,dim)
 % This file is from matlabtools.googlecode.com
 
 if nargin == 1
-	dim = find(size(X)~=1,1);
-	if isempty(dim)
-		dim = 1;
-	end
+    dim = find(size(X) ~= 1, 1);
+    if isempty(dim)
+        dim = 1;
+    end
 end
-N = sum(diff(sort(X,dim),[],dim)>0,dim)+1;
+N = sum(diff(sort(X, dim), [], dim) > 0, dim) + 1;
 
 end
-

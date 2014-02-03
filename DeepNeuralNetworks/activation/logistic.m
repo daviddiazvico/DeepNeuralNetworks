@@ -10,5 +10,4 @@ function [y] = logistic(x)
 % Author:
 %	David Diaz Vico
 
-y = 1./(1+exp(-x));
-
+y = 1./(1 + exp(-x));

@@ -10,8 +10,7 @@ function [labels] = targets2labels(targets)
 % Author:
 %	David Diaz Vico
 
-[D,N] = size(targets);
+[D, N] = size(targets);
 for n = 1:N
-	[predictions(1,n),labels(1,n)] = max(targets(:,n));
+    [predictions(1, n), labels(1, n)] = max(targets(:, n));
 end
-

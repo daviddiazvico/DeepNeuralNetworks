@@ -10,5 +10,4 @@ function [y] = dsoftsign(x)
 % Author:
 %	David Diaz Vico
 
-y = 1./(1+abs(x)).^2;
-
+y = 1./(1 + abs(x)).^2;

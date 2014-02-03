@@ -1,5 +1,5 @@
-function [] = visualizePropagation(num,weights,data,...
-	activations,label,currentPath)
+function [] = visualizePropagation(num, weights, data, activations, label, ...
+                                   currentPath)
 % Visualizes the learned weights, the original data and the propagated values.
 %
 % Arguments:
@@ -16,30 +16,29 @@ function [] = visualizePropagation(num,weights,data,...
 %	David Diaz Vico
 
 % Creates the plotting window
-figure(num,'Name',label);
+figure(num, 'Name', label);
 title('label');
 
 L = length(weights);
 
 % Plots the data
-subplot(3,L,1);
-visualize(data(:,1:16));
+subplot(3, L, 1);
+visualize(data(:, 1:16));
 title('data');
 
 for l = 1:L
 
-	% Plots the weights
-	subplot(3,L,L+l);
-	visualize(cell2mat(weights(l)));
-	title(strcat('learned weights.',num2str(l)));
+    % Plots the weights
+    subplot(3, L, L + l);
+    visualize(cell2mat(weights(l)));
+    title(strcat('learned weights.', num2str(l)));
 
-	% Plots the representations
-	subplot(3,L,2*L+l);
-	visualize(cell2mat(activations(l))(:,1:16));
-	title(strcat('representation.',num2str(l)));
+    % Plots the representations
+    subplot(3, L, 2*L + l);
+    visualize(cell2mat(activations(l))(:, 1:16));
+    title(strcat('representation.', num2str(l)));
 
 end
 
 % Saves the picture
-print('-djpeg',strcat(currentPath,'/',label,'.jpg'));
-
+print('-djpeg', strcat(currentPath, '/', label, '.jpg'));

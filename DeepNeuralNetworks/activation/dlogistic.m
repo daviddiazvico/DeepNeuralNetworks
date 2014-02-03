@@ -10,5 +10,4 @@ function [y] = dlogistic(x)
 % Author:
 %	David Diaz Vico
 
-y = exp(-x)./(1+exp(-x)).^2;
-
+y = exp(-x)./(1 + exp(-x)).^2;

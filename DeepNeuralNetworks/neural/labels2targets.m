@@ -10,10 +10,9 @@ function [targets] = labels2targets(labels)
 % Author:
 %	David Diaz Vico
 
-[D,N] = size(labels);
+[D, N] = size(labels);
 U = unique(labels);
-targets = zeros(nunique(labels),N);
+targets = zeros(nunique(labels), N);
 for n = 1:length(U)
-	targets(n,labels==U(n)) = 1;
+    targets(n, labels == U(n)) = 1;
 end
-

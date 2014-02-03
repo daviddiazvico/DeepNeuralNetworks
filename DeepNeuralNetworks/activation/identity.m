@@ -11,4 +11,3 @@ function [y] = identity(x)
 %	David Diaz Vico
 
 y = x;
-

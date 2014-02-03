@@ -1,4 +1,4 @@
-function [model] = ensembleDeepNetwork(hiddenModel,outputModel)
+function [model] = ensembleDeepNetwork(hiddenModel, outputModel)
 % Assembles a deep neural network.
 %
 % Arguments:
@@ -13,21 +13,20 @@ function [model] = ensembleDeepNetwork(hiddenModel,outputModel)
 
 L1 = length(hiddenModel.W);
 L2 = length(outputModel.W);
-W = cell(1,L1+L2);
-B = cell(1,L1+L2);
+W = cell(1, L1 + L2);
+B = cell(1, L1 + L2);
 
 % Copies the hidden layers
 for l = 1:L1
-	W(l) = cell2mat(hiddenModel.W(l));
-	B(l) = cell2mat(hiddenModel.B(l));
+    W(l) = cell2mat(hiddenModel.W(l));
+    B(l) = cell2mat(hiddenModel.B(l));
 end
 
 % Copies the output layers
 for l = 1:L2
-	W(L1+l) = cell2mat(outputModel.W(l));
-	B(L1+l) = cell2mat(outputModel.B(l));
+    W(L1 + l) = cell2mat(outputModel.W(l));
+    B(L1 + l) = cell2mat(outputModel.B(l));
 end
 
 model.W = W;
 model.B = B;
-
