@@ -12,8 +12,8 @@ if s == floor(s)
     x = 0;
     y = 0;
     for i = 1:N
-        a(x*s + 1 + x:x*s + s + x, y*s + 1 + y:y*s + s + ...
-          y) = reshape(X(:, i), s, s)';
+        a(x*s + 1 + x:x*s + s + x, y*s + 1 + y:y*s + s + y) = reshape( ...
+                                                              X(:, i), s, s)';
         x = x + 1;
         if(x >= num)
             x = 0;
